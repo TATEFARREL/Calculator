@@ -3,10 +3,201 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Calculator"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+       
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+       
+        Height="550" 
+        Width="300"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    
+    
+    <Border Background="White"
+        CornerRadius="15"
+        BorderThickness="2"
+        BorderBrush="#ebedf3"
+        Padding="5"
+        >
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!--Output Zone-->
+            <Grid Grid.ColumnSpan="4" 
+                  Grid.Row="0"
+                  >
+
+                <TextBlock x:Name="Output" 
+                           Text="HELLO WORLD :)"  
+                           FontWeight="Light" 
+                           FontSize="30" 
+                           Background="LightYellow"
+                 
+                           />
+            </Grid>
+            
+            <!--Input Zone-->
+            <Grid Grid.Row="4" 
+                  Grid.Column="1" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+                        
+                        BorderBrush="Transparent">2</Button>
+            </Grid>
+            <Grid Grid.Row="4" 
+                  Grid.Column="2" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+            FontSize="25"
+            
+            BorderBrush="Transparent">3</Button>
+            </Grid>
+            <Grid Grid.Row="3" 
+                Grid.Column="0" 
+                Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+            
+                        BorderBrush="Transparent">4</Button>
+                
+            </Grid>
+            <Grid Grid.Row="3" 
+                  Grid.Column="1" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">5</Button>
+
+            </Grid>
+            <Grid Grid.Row="3" 
+                    Grid.Column="2" 
+                    Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">6</Button>
+
+            </Grid>
+            <Grid Grid.Row="2" 
+                  Grid.Column="0" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">7</Button>
+
+            </Grid>
+            <Grid Grid.Row="2" 
+                  Grid.Column="1" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">8</Button>
+
+            </Grid>
+            <Grid Grid.Row="2" 
+                  Grid.Column="2" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">1</Button>
+
+            </Grid>
+            <Grid Grid.Row="4" 
+                  Grid.Column="3" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">=</Button>
+
+            </Grid>
+            <Grid Grid.Row="3" 
+                  Grid.Column="3" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">+</Button>
+
+            </Grid>
+            <Grid Grid.Row="2" 
+                  Grid.Column="3" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">-</Button>
+
+            </Grid>
+            <Grid Grid.Row="1" 
+                  Grid.Column="0" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">X</Button>
+
+            </Grid>
+            <Grid Grid.Row="1" 
+                  Grid.Column="1" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">!</Button>
+
+            </Grid>
+            <Grid Grid.Row="1" 
+                  Grid.Column="2" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">%</Button>
+
+            </Grid>
+            <Grid Grid.Row="1" 
+                          Grid.Column="3" 
+                          Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">/</Button>
+
+             </Grid>
+            <Grid Grid.Row="4" 
+                  Grid.Column="0" 
+                  Margin="2">
+                <Button Background="#ebedf3" 
+                        FontSize="25"
+
+                        BorderBrush="Transparent">1</Button>
+
+            </Grid>
+
+        </Grid>
         
-    </Grid>
+        
+    </Border>
 </Window>
